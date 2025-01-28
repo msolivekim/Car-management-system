@@ -1,44 +1,48 @@
+
 public class Car {
-	private String name;
-	private String make;
-	private double price;
-	
+	private String carName;
+	private int carId;
+	private boolean status;
+	private double serviceFee;
 	public Car() {
-		this.name="";
-		this.make="";
-		this.price=-1;
+		carName="x";
+		carId=-1;
+		status=false;
+		serviceFee=0;
+	}
+	public Car(String name, int id, boolean s, double sF) {
+		this.carName=name;
+		this.carId=id;
+		this.status=s;
+		this.serviceFee=sF;
+	}
+	public String getCarName() {
+		return carName;
+	}
+	public void setCarName(String carName) {
+		this.carName = carName;
+	}
+	public int getCarId() {
+		return carId;
+	}
+	public void setCarId(int carId) {
+		this.carId = carId;
+	}
+	public boolean isStatus() {
+		return status;
+	}
+	public void setStatus(boolean status) {
+		this.status = status;
+	}
+	public double getServiceFee() {
+		return serviceFee;
+	}
+	public void setServiceFee(double serviceFee) {
+		this.serviceFee = serviceFee;
+	}
+	public void printme() {
+		System.out.println("Car name: "+ carName + ", Id: "+carId+", status: "+status+", service Fee: "+serviceFee);
 	}
 	
-	public Car(String name, String make, double price) {
-		this.name=name;
-		this.make=make;
-		this.price=price;
-	}
 	
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getMake() {
-		return make;
-	}
-
-	public void setMake(String make) {
-		this.make = make;
-	}
-
-	public double getPrice() {
-		return price;
-	}
-
-	public void setPrice(double price) {
-		this.price = price;
-	}
-
 }
-
